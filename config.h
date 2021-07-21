@@ -61,8 +61,15 @@ static const Rule rules[] = {
     { NULL,         NULL,           "WhatsApp",         1 << 1,       0,           0,         0,          0 },   // second monitor tag 2
     { "TelegramDesktop", "telegram-desktop", NULL,      1 << 1,       0,           0,         0,          0 },   // second monitor tag 2
     // Pop Ups
+    { "zoom",       "zoom",         "Chat",             0,            1,           0,         0,         -1 },
     { "zoom",       "zoom",         "Settings",         0,            1,           0,         0,         -1 },
+
     { "KeePass2",   "keepass2",     "Edit Entry",       0,            1,           0,         0,         -1 },
+    { "KeePass2",   "keepass2",     "Add Entry",        0,            1,           0,         0,         -1 },
+
+    { "jetbrains-rider", "jetbrains-rider", "Welcome to JetBrains Rider",        0,            1,           0,         0,         -1 },
+
+	{ "Virt-manager", "virt-manager", "win10 on QEMU/KVM",       	    1 << 7,       0,           0,         0,         -1 },  // tag 8
 };
 
 /* layout(s) */
