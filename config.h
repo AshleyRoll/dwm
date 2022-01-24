@@ -56,10 +56,10 @@ static const Rule rules[] = {
 	{ NULL,         "spterm",       NULL,       	    SPTAG(0),     1,           1,         0,         -1 },
 	{ NULL,         "spcalc",       NULL,     	        SPTAG(1),     1,           1,         0,         -1 },
     // Chat
-    { "discord",    "discord",      NULL,               1,            0,           0,         0,          0 },   // second monitor tag 1
-    { "Slack",      "slack",        NULL,               1,            0,           0,         0,          0 },   // second monitor tag 1
-    { NULL,         NULL,           "WhatsApp",         1 << 1,       0,           0,         0,          0 },   // second monitor tag 2
-    { "TelegramDesktop", "telegram-desktop", NULL,      1 << 1,       0,           0,         0,          0 },   // second monitor tag 2
+    { "discord",    "discord",      NULL,               1,            0,           0,         0,          1 },   // second monitor tag 1
+    { "Slack",      "slack",        NULL,               1,            0,           0,         0,          1 },   // second monitor tag 1
+    { NULL,         NULL,           "WhatsApp",         1 << 1,       0,           0,         0,          1 },   // second monitor tag 2
+    { "TelegramDesktop", "telegram-desktop", NULL,      1 << 1,       0,           0,         0,          1 },   // second monitor tag 2
     // Pop Ups
     { "zoom",       "zoom",         "Chat",             0,            1,           0,         0,         -1 },
     { "zoom",       "zoom",         "Settings",         0,            1,           0,         0,         -1 },
