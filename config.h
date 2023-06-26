@@ -69,7 +69,9 @@ static const Rule rules[] = {
 
     { "jetbrains-rider", "jetbrains-rider", "Welcome to JetBrains Rider",        0,            1,           0,         0,         -1 },
 
-	{ "Virt-manager", "virt-manager", "win10 on QEMU/KVM",       	    1 << 7,       0,           0,         0,         -1 },  // tag 8
+	{ "Virt-manager", "virt-manager", "win10 on QEMU/KVM",            1 << 7,       0,           0,         0,         -1 },  // tag 8
+
+    { NULL,   NULL,  "Lady Heather X11",                0,            1,           0,         1,         -1 },
 };
 
 /* layout(s) */
