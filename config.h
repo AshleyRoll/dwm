@@ -49,29 +49,30 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	*/
-	/* class        instance        title               tags mask    isfloating   isterminal  noswallow  monitor */
-	{ "Gimp",       NULL,           NULL,       	    1 << 8,       0,           0,         0,         -1 },  // tag 9
-	{ TERMCLASS,    NULL,           NULL,       	    0,            0,           1,         0,         -1 },
-	{ NULL,         NULL,           "Event Tester",     0,            0,           0,         1,         -1 },
-	{ NULL,         "spterm",       NULL,       	    SPTAG(0),     1,           1,         0,         -1 },
-	{ NULL,         "spcalc",       NULL,     	        SPTAG(1),     1,           1,         0,         -1 },
+	/* class        instance        title                 tags mask    isfloating   isterminal  noswallow  monitor */
+	{ "Gimp",       NULL,           NULL,       	      1 << 8,       0,           0,         0,         -1 },  // tag 9
+	{ TERMCLASS,    NULL,           NULL,       	      0,            0,           1,         0,         -1 },
+	{ NULL,         NULL,           "Event Tester",       0,            0,           0,         1,         -1 },
+	{ NULL,         "spterm",       NULL,          	      SPTAG(0),     1,           1,         0,         -1 },
+	{ NULL,         "spcalc",       NULL,                 SPTAG(1),     1,           1,         0,         -1 },
     // Chat
-    { "discord",    "discord",      NULL,               1,            0,           0,         0,          1 },   // second monitor tag 1
-    { "Slack",      "slack",        NULL,               1,            0,           0,         0,          1 },   // second monitor tag 1
-    { NULL,         NULL,           "WhatsApp",         1 << 1,       0,           0,         0,          1 },   // second monitor tag 2
-    { "TelegramDesktop", "telegram-desktop", NULL,      1 << 1,       0,           0,         0,          1 },   // second monitor tag 2
+    { "discord",    "discord",      NULL,                 1,            0,           0,         0,          1 },   // second monitor tag 1
+    { "Slack",      "slack",        NULL,                 1,            0,           0,         0,          1 },   // second monitor tag 1
+    { "Wasistlos",  "wasistlos",    NULL,                 1 << 1,       0,           0,         0,          1 },   // second monitor tag 2
+    { "TelegramDesktop", "telegram-desktop", NULL,        1 << 1,       0,           0,         0,          1 },   // second monitor tag 2
     // Pop Ups
-    { "zoom",       "zoom",         "Chat",             0,            1,           0,         0,         -1 },
-    { "zoom",       "zoom",         "Settings",         0,            1,           0,         0,         -1 },
+    { "zoom",       "zoom",         "Chat",               0,            1,           0,         0,         -1 },
+    { "zoom",       "zoom",         "Settings",           0,            1,           0,         0,         -1 },
 
-    { "KeePass2",   "keepass2",     "Edit Entry",       0,            1,           0,         0,         -1 },
-    { "KeePass2",   "keepass2",     "Add Entry",        0,            1,           0,         0,         -1 },
+    { "KeePass2",   "keepass2",     "Edit Entry",         0,            1,           0,         0,         -1 },
+    { "KeePass2",   "keepass2",     "Add Entry",          0,            1,           0,         0,         -1 },
 
-    { "jetbrains-rider", "jetbrains-rider", "Welcome to JetBrains Rider",        0,            1,           0,         0,         -1 },
+    { "jetbrains-rider", "jetbrains-rider", "Welcome to JetBrains Rider", 0,            1,           0,         0,         -1 },
 
-	{ "Virt-manager", "virt-manager", "win10 on QEMU/KVM",            1 << 7,       0,           0,         0,         -1 },  // tag 8
+	{ "Virt-manager", "virt-manager", "win10 on QEMU/KVM", 1 << 7,       0,           0,         0,         -1 },  // tag 8
 
-    { NULL,   NULL,  "Lady Heather X11",                0,            1,           0,         1,         -1 },
+    { "XMinesweep", "xminesweep",  NULL,                  0,            1,           0,         1,         -1 },
+    { NULL,   NULL,  "Lady Heather X11",                  0,            1,           0,         1,         -1 },
 };
 
 /* layout(s) */
@@ -301,8 +302,8 @@ static const Key keys[] = {
 	{ 0, XF86XK_TouchpadToggle,                    spawn,                  SHCMD("(synclient | grep 'TouchpadOff.*1' && synclient TouchpadOff=0) || synclient TouchpadOff=1") },
 	{ 0, XF86XK_TouchpadOff,                       spawn,                  {.v = (const char*[]){ "synclient", "TouchpadOff=1", NULL } } },
 	{ 0, XF86XK_TouchpadOn,                        spawn,                  {.v = (const char*[]){ "synclient", "TouchpadOff=0", NULL } } },
-	{ 0, XF86XK_MonBrightnessUp,                   spawn,                  {.v = (const char*[]){ "xbacklight", "-inc", "15", NULL } } },
-	{ 0, XF86XK_MonBrightnessDown,                 spawn,                  {.v = (const char*[]){ "xbacklight", "-dec", "15", NULL } } },
+	{ 0, XF86XK_MonBrightnessUp,                   spawn,                  {.v = (const char*[]){ "xbacklight", "-inc", "5", NULL } } },
+	{ 0, XF86XK_MonBrightnessDown,                 spawn,                  {.v = (const char*[]){ "xbacklight", "-dec", "5", NULL } } },
 
 	/* { MODKEY|Mod4Mask,           XK_h,          incrgaps,               {.i = +1 } }, */
 	/* { MODKEY|Mod4Mask,           XK_l,          incrgaps,               {.i = -1 } }, */
